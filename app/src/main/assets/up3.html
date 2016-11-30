@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://172.30.60.234:3221/up3.html -->
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title></title>
+</head>
+<body>
+<iframe name="demoIframe" style="display:none" src="./up3_files/saved_resource.html"></iframe>
+<form target="demoIframe" action="http://172.30.60.234:3221/upload.php" method="post" enctype="multipart/form-data">
+    <input class="filename" type="file" name="fileLabel">
+    <input type="submit" value="提交">
+</form>
+
+
+<script src="./up3_files/zepto.min.js"></script>
+<script>
+    $('iframe').on('load', function() {
+        var responseText = $('iframe')[0].contentDocument.body.textContent;
+        var responseData = JSON.parse(responseText) || {};
+        if (responseData.isSuccess == true || responseData.code == 200) {
+            //success
+        } else {
+            //error
+        }
+    });
+</script>
+</body><iframe allowtransparency="true" frameborder="0" id="abs-top-frame" src="./up3_files/top.html" style="position: fixed !important; z-index: 2147483647 !important; overflow: hidden !important; top: 0px !important; left: 0px !important; right: 0px !important; width: 0px !important; height: 0px !important; max-height: none !important; min-height: 0px !important; margin: 0px auto !important; padding: 0px !important; border: 0px !important; display: none !important; background-color: transparent !important;"></iframe></html>
